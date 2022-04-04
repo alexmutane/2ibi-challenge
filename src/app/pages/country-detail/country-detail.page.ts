@@ -38,7 +38,14 @@ export class CountryDetailPage implements OnInit {
   }
 
   exportInfo(country: Country, fileType: string) {
+    switch (fileType) {
+      case 'csv':
+        this.exportService.exportCsv();
+        break;
 
+      default:
+        break;
+    }
   }
 
 }
